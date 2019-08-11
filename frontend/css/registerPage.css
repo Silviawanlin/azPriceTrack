@@ -10,8 +10,8 @@ body{
 div{
     text-align:center;
     background-color: white;
-    min-height: 25em;
-    min-width: 30em;
+    width: 30em;
+    height: 25em;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -28,7 +28,7 @@ form{
 }
 
 input[type=text]{
-    padding: 12px 20px;
+    padding: 8px 12px;
     margin: 4px 0px;
     inline-size: 260px;
     background-color:#f2f2f2; 
@@ -41,20 +41,9 @@ input[type=text]::placeholder{
 
 button{
     display: inline;
-    padding: 12px 20px;
-    margin: 4px 0;
+    padding: 12px 12px;
+    margin: 4px 4px;
     inline-size: 260px;
     background-color: lightskyblue;
     color:#f7f4f4;
 }
-
-label{
-    font-size: smaller;
-    color:#dddddd;
-}
-
-a{
-    color:lightskyblue;
-    text-decoration-line: none;
-}
-

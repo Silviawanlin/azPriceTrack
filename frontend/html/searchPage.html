@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Let's Save Money</title>
+        <link rel="stylesheet" type="text/css" href="/css/searchPage.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+        <script type="text/javascript" src="/js/jquery-3.4.1.js" ></script>
     </head>
-    <body>
-        <form>
-            <input type="text" value="put your item to here">
-            <button type="btn">Search</button>
-        </form>
+    <body id="regis">
+        <div class="search">
+            <input type="text" placeholder="Search..." />
+            <button onclick="search()">Search</button>
+        </div>
+        <table id="data"  class="table table-hover">
+            <tbody>
+                <tr id="tb">
+                    <!-- <th scope="col">Title</th>
+                    <th scope="col">Price</th> -->
+                </tr> 
+            </tbody>
+        </table>
     </body>
 </html>
