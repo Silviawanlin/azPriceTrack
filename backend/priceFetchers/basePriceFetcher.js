@@ -1,6 +1,6 @@
-export class BasePriceFetcher {
+class BasePriceFetcher {
     constructor() {
-      throw Error("Abstract class cannot be instantiated.");
+
     } 
     request(url){
 
@@ -18,4 +18,4 @@ export class BasePriceFetcher {
 
     }
   }
- 
+ module.exports = BasePriceFetcher
