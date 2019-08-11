@@ -1,4 +1,4 @@
-function registration(){
+function register(){
     var firstname=$('#firstname').val();
     var lastname=$('#lastname').val();
     var password=$('#password').val();
