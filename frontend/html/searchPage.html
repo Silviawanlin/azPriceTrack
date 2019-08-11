@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <link rel="stylesheet" type="text/css" href="/css/searchPage.css" />
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
@@ -8,14 +8,15 @@
     </head>
     <body id="regis">
         <div class="search">
-            <input type="text" placeholder="Search..." />
+            <input id="searchContent" type="text" placeholder="Put item to here to search it..." />
             <button onclick="search()">Search</button>
         </div>
-        <table id="data"  class="table table-hover">
+        <table id="data"  class="table table-hover table-dark">
             <tbody>
                 <tr id="tb">
-                    <!-- <th scope="col">Title</th>
-                    <th scope="col">Price</th> -->
+                    <th scope="col">Title</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Price</th>
                 </tr> 
             </tbody>
         </table>

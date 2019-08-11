@@ -9,7 +9,7 @@ function login(){
     console.log(password);
 
 //     $.ajax({
-//         url:"192.168.200.2:3000/user/register",
+//         url:"http://helpdesk.sitacorp.com:8080/stdnttraining/userLogin?username=shivakumar.gunti@gmail.com&password=803205ab3f1b9b6fa6990393f5ac6b58",
 //         type:'GET',
 //         success: function(data){
 //                     var resp=JSON.parse(data);
