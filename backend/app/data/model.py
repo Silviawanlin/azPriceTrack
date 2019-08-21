@@ -1,15 +1,9 @@
 import os
 import asyncio
 from gino import Gino
-
-db = Gino()
-
-
-class User(db.Model):
-    __tablename__ = 'users'
-
-    id = db.Column(db.Integer(), primary_key=True)
-    nickname = db.Column(db.Unicode(), default='noname')
+from price import Price
+from database import Database
+db = Database.get()
 
 
 async def main():
@@ -17,9 +11,9 @@ async def main():
 
     # Create tables
     await db.gino.create_all()
-    u1 = await User.create(nickname='test_user')
-    print(u1.id, u1.nickname) 
-    user = await User.query.where(User.nickname == 'test_user').gino.first()
-    print(user)
+    #p = await Price.create(external_id = "test", url= "url", price = 100)
+    #print(p) 
+    price = await Price.query.gino.all()
+    print(price)
 
 asyncio.get_event_loop().run_until_complete(main())
