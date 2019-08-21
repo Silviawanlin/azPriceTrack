@@ -5,7 +5,7 @@ class Price {
     {
         let priceFecther = new PriceFecther();
         await priceFecther.request(url);
-        return new PriceViewModel(url,await priceFecther.price(), await priceFecther.title());
+        return new PriceViewModel(url,await priceFecther.price(), await priceFecther.title(), []);
     }
 
 }

@@ -1,8 +1,9 @@
 const express = require('express')
 const priceRouter = require('./routers/price')
 const userRouter = require('./routers/user')
+const cors = require('cors');
 const app = express()
-
+app.use(cors());
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.use('/user', userRouter );
