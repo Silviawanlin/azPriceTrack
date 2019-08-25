@@ -1,4 +1,5 @@
+.DS_Store
 backend/node_modules/**
 backend/testScripts/**
-.DS_Store
+backend/secrets/
 frontend/.DS_Store
