@@ -2,4 +2,5 @@
 backend/node_modules/**
 backend/testScripts/**
 backend/secrets/
+backend/data_fetchers/__pycache__
 frontend/.DS_Store
