@@ -9,9 +9,11 @@
     },
     "queue":
     {
-        "num_works_per_time": 1,
-        "queue_type":"AWSSimpleQueueService",
-        "queue_name":"datafetch.fifo"
+        "numWorksPerTime": 1,
+        "queueType":"AWSSimpleQueueService",
+        "queueName":"datafetch.fifo",
+        "pollingIntervalOnActive": 0.5,
+        "pollingIntervalOnIdle": 60
     },
     "logger":
     {
