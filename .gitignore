@@ -4,3 +4,5 @@ backend/testScripts/**
 backend/secrets/
 backend/data_fetchers/__pycache__
 frontend/.DS_Store
+backend/data_fetchers/price-fetcher-env
+backend/data_fetchers/debug.log

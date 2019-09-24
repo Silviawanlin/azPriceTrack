@@ -3,3 +3,5 @@ bs4
 selenium
 pytest
 pifetcher
+pymongo
+dnspython

@@ -1,5 +1,6 @@
 import pymongo
-from os import path
+from os import environ
+
 
 class DB:
     DB_NAME = 'azpricetrack'
@@ -11,19 +12,18 @@ class DB:
     @staticmethod
     def get_db():
         if not DB.__db:
-            conn_str = None
-            if path.exists(DB.CONNECTION_STRING_PATH):
-                with open(DB.CONNECTION_STRING_PATH) as f:
-                    conn_str = f.read()
+            conn_str = environ["PRICE_FETCHER_MONGO_CONNECTION"]
             mongo_client = pymongo.MongoClient(conn_str)
             DB.__db = mongo_client[DB.DB_NAME]
         return DB.__db
+
     @staticmethod
     def add_items(items):
         db = DB.get_db()
         collection = db[DB.ITEM_COLLECTION_NAME]
         for item in items:
             collection.insert_one(item)
+
     @staticmethod
     def remove_items(query):
         db = DB.get_db()
@@ -34,7 +34,8 @@ class DB:
     def get_items():
         db = DB.get_db()
         collection = db[DB.ITEM_COLLECTION_NAME]
-        return [ doc for doc in collection.find({}) ]
+        return [doc for doc in collection.find({})]
+
     @staticmethod
     def save_price(price):
         db = DB.get_db()
